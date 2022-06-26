@@ -11,7 +11,7 @@ const postSchema = new Schema({
 })
 
 //connect db
-mongoose.connect("mongodb+srv://admin:admin123@cluster0.k4izb.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect(process.env.MONGO_URL);
 const Post = mongoose.model('post',postSchema);
 
 module.exports = Post;
